@@ -3,7 +3,7 @@ services:
   - docker
 
 script:
-  - docker build --tag myimage .
+  - docker build -f Dockerfile.armhf --tag myimage .
   - docker run myimage
 
 after_script:
