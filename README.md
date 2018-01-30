@@ -7,8 +7,7 @@ Latest Domoticz git release.
 
 ## Dockerimage
 
-[![](https://images.microbadger.com/badges/image/sdesbure/domoticz.svg)](https://microbadger.com/images/sdesbure/domoticz "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/version/sdesbure/domoticz.svg)](https://microbadger.com/images/sdesbure/domoticz "Get your own version badge on microbadger.com")
+https://travis-ci.org/vguar/docker_domoticz.svg?branch=master
 
 ## How to use
 
