@@ -3,8 +3,10 @@ services:
   - docker
 
 script:
-  - docker build --tag myimage .
-  - docker run myimage
+# prepare qemu
+- docker run --rm --privileged multiarch/qemu-user-static:register --reset
+- docker build --tag myimage .
+- docker run myimage
 
 after_script:
 - docker images
