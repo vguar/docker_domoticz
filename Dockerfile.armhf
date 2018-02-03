@@ -45,13 +45,9 @@ RUN apk add --no-cache git \
 	 cd /src/open-zwave && \
 	 make && \
 	 ln -s /src/open-zwave /src/open-zwave-read-only && \
-	 #git clone --depth 2 https://github.com/domoticz/domoticz.git /src/domoticz && \
-	 mkdir /src/domoticz && \
+	 git clone --depth 2 https://github.com/domoticz/domoticz.git /src/domoticz && \
 	 cd /src/domoticz && \
-	 wget  -O domoticz_release.tgz https://github.com/domoticz/domoticz/archive/3.8153.tar.gz && \
-         tar xvfz domoticz_release.tgz && \
-	 rm domoticz_release.tgz && \
-	 #git fetch --unshallow && \
+	 git fetch --unshallow && \
 	 cmake -DCMAKE_BUILD_TYPE=Release . && \
 	 make && \
 	 rm -rf /src/domoticz/.git && \
