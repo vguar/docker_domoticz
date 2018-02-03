@@ -5,8 +5,11 @@ services:
 script:
 # prepare qemu
 - docker run --rm --privileged multiarch/qemu-user-static:register --reset
-- docker build --tag myimage .
-- docker run myimage
+- docker build -f Dockerfile.armhf -t vguar/domoticz .
 
 after_script:
 - docker images
+- # Login to docker registry
+- docker login --username "$DOCKER_USER" --password "$DOCKER_PASSWD"
+- docker push vguar/domoticz
+
