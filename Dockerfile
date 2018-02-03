@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM armhf/alpine:latest
 MAINTAINER Sylvain Desbureaux <sylvain@desbureaux.fr>
 
 # install packages &
@@ -27,7 +27,7 @@ LABEL org.label-schema.vcs-ref=$VCS_REF \
 
 RUN 	mkdir /domoticz && \
 	cd domoticz && \
-	wget -O domoticz_release.tgz "http://www.domoticz.com/download.php?channel=release&type=release&system=Linux&machine=armv7l" && \
+	wget -O domoticz_release.tgz "http://www.domoticz.com/download.php?channel=release&type=release&system=linux&machine=armv7l" && \
 	echo "::: Unpacking Domoticz..." && \
 	tar xvfz domoticz_release.tgz && \
 	rm domoticz_release.tgz
